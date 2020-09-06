@@ -2,7 +2,7 @@
 import Button from "./components/Button.svelte";
 	import Logo from "./components/Logo.svelte";
 
-	export let name;
+	export let name: string;
 
 	const onClick = (e: MouseEvent) => console.log(e);
 </script>

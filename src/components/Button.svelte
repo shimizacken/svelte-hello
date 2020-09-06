@@ -1,10 +1,9 @@
 <script lang="ts">
-import { ButtonType } from "../types/buttonTypes";
+    import { ButtonType } from "../types/buttonTypes";
 
-
-    export let onClick: (e: MouseEvent) => void;
-    export let text: string;
-    export let buttonType: ButtonType;
+    export let onClick: (e: MouseEvent) => void | undefined;
+    export let text: string | undefined;
+    export let buttonType: ButtonType | undefined;
 </script>
 
-<button on:click={onClick} type={buttonType}>{text}</button>
+<button on:click={onClick} type={buttonType || ButtonType.BUTTON}>{text}</button>
