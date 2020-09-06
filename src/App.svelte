@@ -1,10 +1,17 @@
-<script>
+<script lang="ts">
+import Button from "./components/Button.svelte";
+	import Logo from "./components/Logo.svelte";
+
 	export let name;
+
+	const onClick = (e: MouseEvent) => console.log(e);
 </script>
 
 <main>
+	<Logo />
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<Button onClick={onClick} text="Click me!" />
 </main>
 
 <style>
