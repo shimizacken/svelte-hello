@@ -1,6 +1,8 @@
 <script lang="ts">
 import Button from "./components/Button.svelte";
+import Heading from "./components/Heading.svelte";
 	import Logo from "./components/Logo.svelte";
+import { HeadingType } from "./types/textTypes";
 
 	export let name: string;
 
@@ -9,7 +11,7 @@ import Button from "./components/Button.svelte";
 
 <main>
 	<Logo />
-	<h1>Hello {name}!</h1>
+	<Heading text="Hello {name}!" headingType={HeadingType.H3} />
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	<Button onClick={onClick} text="Click me!" />
 </main>
@@ -20,13 +22,6 @@ import Button from "./components/Button.svelte";
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {
