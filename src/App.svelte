@@ -1,6 +1,6 @@
 <script lang="ts">
 import Button from "./components/Button.svelte";
-import Heading from "./components/Heading.svelte";
+import Heading from "./components/Heading/Heading.svelte";
 	import Logo from "./components/Logo.svelte";
 import { HeadingType } from "./types/textTypes";
 
