@@ -1,4 +1,4 @@
-<style lang="scss">
+<style>
   h1,
   h2,
   h3,
@@ -24,12 +24,10 @@
 </style>
 
 <script lang="ts">
-import { HeadingType } from "../../types/textTypes";
+  import { HeadingType } from '../../types/textTypes'
 
-
-
-  export let text: string;
-  export let headingType: HeadingType | HeadingType.H1;
+  export let text: string
+  export let headingType: HeadingType | HeadingType.H1
 </script>
 
 {#if headingType === HeadingType.H1}
