@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Video from './features/Video/Video.svelte';
+    import VideoContainer from './features/Video/VideoContainer.svelte';
 </script>
 
 <main>
-    <Video />
+    <VideoContainer />
 </main>
 
 <style>
