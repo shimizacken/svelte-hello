@@ -26,3 +26,9 @@
 <video width="300" height="200">
     <track kind="captions" />
 </video>
+
+<style>
+    video {
+        border-radius: 10px;
+    }
+</style>
