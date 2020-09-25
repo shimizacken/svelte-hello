@@ -8,12 +8,6 @@
     let mediaStream: MediaStream;
     const constraints = {audio: true, video: {width: 300, height: 200}};
 
-    // const getMediaDevices = async () => {
-    //     const devices = await navigator.mediaDevices.enumerateDevices();
-
-    //     return devices;
-    // };
-
     const onClick = async () => {
         displayLoader = true;
         mediaStream = await getUserMedia(constraints);

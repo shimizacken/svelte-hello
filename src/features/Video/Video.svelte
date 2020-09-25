@@ -2,7 +2,9 @@
     export let mediaStream: MediaStream;
 
     $: if (mediaStream) {
-        document.querySelector('video').srcObject = mediaStream;
+        const video = document.querySelector('video');
+        video.srcObject = mediaStream;
+        video.play();
     }
 </script>
 
