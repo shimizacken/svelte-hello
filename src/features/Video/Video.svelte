@@ -1,8 +1,15 @@
 <script lang="ts">
+    import {onMount} from 'svelte';
+
     export let mediaStream: MediaStream;
 
+    let video: HTMLMediaElement;
+
+    onMount(async () => {
+        video = document.querySelector('video');
+    });
+
     $: if (mediaStream) {
-        const video = document.querySelector('video');
         video.srcObject = mediaStream;
         video.play();
     }
