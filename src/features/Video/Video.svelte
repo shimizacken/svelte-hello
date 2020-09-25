@@ -1,17 +1,25 @@
 <script lang="ts">
     import {onMount} from 'svelte';
+    import {onDestroy} from 'svelte';
 
     export let mediaStream: MediaStream;
 
     let video: HTMLMediaElement;
 
-    onMount(async () => {
+    onMount(() => {
         video = document.querySelector('video');
+    });
+
+    onDestroy(() => {
+        // todo: reset video
     });
 
     $: if (mediaStream) {
         video.srcObject = mediaStream;
-        video.play();
+
+        video.onloadedmetadata = function (e) {
+            video.play();
+        };
     }
 </script>
 
